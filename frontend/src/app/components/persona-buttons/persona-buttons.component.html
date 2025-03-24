@@ -1,0 +1,8 @@
+<!-- filepath: c:\Code\PersonaChatBot\my-fullstack-app\frontend\src\app\components\persona-buttons\persona-buttons.component.html -->
+<div class="persona-buttons">
+  <button *ngFor="let persona of personas" 
+          (click)="selectPersona(persona)" 
+          [class.selected]="persona === selectedPersona">
+    {{ persona.name }}
+  </button>
+</div>

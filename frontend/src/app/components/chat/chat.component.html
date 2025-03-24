@@ -1,0 +1,22 @@
+<!-- filepath: c:\Code\PersonaChatBot\my-fullstack-app\frontend\src\app\components\chat\chat.component.html -->
+<div class="chat-container">
+  <div class="chat-header">
+    <h2>NielsenIQ Chat</h2>
+    <p>Persona ID: {{ selectedPersona }}</p>
+    <p>Conversation ID: {{ selectedConversationListing.id }}</p>
+  </div>
+  <div class="chat-content" #chatContent>
+    <div class="chat-messages">
+      <div *ngFor="let message of messages" class="message">
+        <p>{{ message.message }}</p>
+      </div>
+      <div *ngIf="loading" class="loading-indicator">
+        <p>Loading...</p>
+      </div>
+    </div>
+  </div>
+  <div class="chat-input">
+    <textarea placeholder="Type your message..." [(ngModel)]="userInput" (keyup.enter)="sendMessage()"></textarea>
+    <button (click)="sendMessage()">Send</button>
+  </div>
+</div>

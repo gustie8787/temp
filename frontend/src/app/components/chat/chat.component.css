@@ -1,0 +1,12 @@
+/* ...existing code... */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full height of the viewport */
+}
+
+.chat-content {
+  flex: 1; /* Take up remaining space */
+  overflow-y: auto;
+}
+/* ...existing code... */

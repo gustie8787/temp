@@ -1,0 +1,11 @@
+<!-- filepath: c:\Code\PersonaChatBot\my-fullstack-app\frontend\src\app\app.component.html -->
+<div class="app-container">
+  <div class="sidebar">
+    <app-conversation-listing (conversationSelected)="selectedConversationListing = $event"></app-conversation-listing>
+  </div>
+  <div class="main-content">
+    <app-persona-buttons (personaSelected)="selectedPersona = $event"></app-persona-buttons>
+    <app-chat [selectedPersona]="selectedPersona" [selectedConversationListing]="selectedConversationListing" 
+      (conversationCreated)="addNewConversation()" (selectNewConversation)="selectNewConversation()"></app-chat>
+  </div>
+</div>

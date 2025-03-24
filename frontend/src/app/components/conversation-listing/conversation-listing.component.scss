@@ -1,0 +1,57 @@
+.conversation-listing {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-height: 800px;
+  overflow-y: auto;
+
+  h2 {
+    text-align: center;
+  }
+
+  button {
+    margin: 5px;
+    padding: 8px; // Further reduced padding to make buttons smaller
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    width: 95%; // Ensure all buttons are the same width
+  }
+
+  button.selected {
+    background-color: #007bff;
+    color: white;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; // Ensure buttons are lined up together
+  }
+}
+
+.conversation-item {
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 4px;
+  background-color: #ffffff;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.conversation-item:hover {
+  background-color: #e0e0e0;
+}
+
+.conversation-item.selected {
+  background-color: #d1e7dd;
+  font-weight: bold;
+}
+
+.timestamp {
+  font-size: 0.8em;
+  color: #888;
+}

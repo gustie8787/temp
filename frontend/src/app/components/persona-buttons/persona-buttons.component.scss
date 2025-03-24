@@ -1,0 +1,22 @@
+/* filepath: c:\Code\PersonaChatBot\my-fullstack-app\frontend\src\app\components\persona-buttons\persona-buttons.component.scss */
+
+.persona-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+
+  button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    flex: 1; // Ensure all buttons are the same size
+    max-width: 150px; // Optional: Set a maximum width for the buttons
+  }
+
+  button.selected {
+    background-color: #007bff;
+    color: white;
+  }
+}
